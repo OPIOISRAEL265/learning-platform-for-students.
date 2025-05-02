@@ -1,0 +1,110 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Our Services</title>  
+    <link rel="stylesheet" href="styles.css">  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            margin: 0;  
+            padding: 0;  
+            background-color: #f4f4f4;  
+        }  
+        header {  
+            background-color: #333;  
+            color: white;  
+            padding: 10px 0;  
+            text-align: center;  
+        }  
+        nav {  
+            display: flex;  
+            justify-content: center;  
+            gap: 20px;  
+        }  
+        nav a {  
+            color: white;  
+            text-decoration: none;  
+            padding: 10px 15px;  
+        }  
+        nav a:hover {  
+            background-color: #575757;  
+        }  
+        .container {  
+            max-width: 1200px;  
+            margin: 20px auto;  
+            padding: 20px;  
+        }  
+        h2 {  
+            text-align: center;  
+            margin-bottom: 20px;  
+        }  
+        .service-grid {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  
+            gap: 20px;  
+        }  
+        .service-item {  
+            background: white;  
+            border: 1px solid #ccc;  
+            border-radius: 5px;  
+            overflow: hidden;  
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+        }  
+        .service-item img {  
+            width: 100%;  
+            height: auto;  
+        }  
+        .service-description {  
+            padding: 15px;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+<header>  
+    <nav>  
+        <a href="#home">Home</a>  
+        <a href="#about">About</a>  
+        <a href="#services">Services</a>  
+        <a href="#contact">Contact</a>  
+    </nav>  
+</header>  
+
+<div class="container">  
+    <h2>Our Learning Activities</h2>  
+    <div class="service-grid">  
+        <div class="service-item">  
+            <img src="IGA.jpg" alt="Activity 1">  
+            <div class="service-description">  
+                <h3>Interactive Coding Sessions</h3>  
+                <p>Students engage in hands-on coding exercises.</p>  
+            </div>  
+        </div>  
+        <div class="service-item">  
+            <img src="Eib.jpg" alt="Activity 2">  
+            <div class="service-description">  
+                <h3>Group Projects</h3>  
+                <p>Collaborative learning through group assignments.</p>  
+            </div>  
+        </div>  
+        <div class="service-item">  
+            <img src="Blog.jpg" alt="Activity 3">  
+            <div class="service-description">  
+                <h3>Virtual Workshops</h3>  
+                <p>Skill-building workshops conducted online.</p>  
+            </div>  
+        </div>  
+        <div class="service-item">  
+            <img src="Stu.webp" alt="Activity 4">  
+            <div class="service-description">  
+                <h3>Live Q&A Sessions</h3>  
+                <p>Students can ask questions in real-time.</p>  
+            </div>  
+        </div>  
+    </div>  
+</div>  
+
+</body>  
+</html>  

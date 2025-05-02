@@ -1,0 +1,114 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+      
+    <title>Education</title>
+    <style >
+        img{
+            width:150px;
+            boarder-radius:100px;
+            float: left;
+            margin-top: 10px;
+        }
+    </style>
+    <img src="elogo-removebg-preview.png">  
+    <link rel="stylesheet" href="BEAST2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+</head>  
+<body>  
+    <div class="main">  
+        <nav class="navbar">  
+            <div class="icon">  
+                <h2 class="logo"></h2>
+            </div>  
+            <div class="menu">  
+                <ul>  
+                    <li><a href="BEAST.html">HOME</a></li>  
+                    <li><a href="copy.html">ABOUT</a></li>  
+                    <li><a href="go.html">SERVICE</a></li>    
+                    <li><a href="fincontact.html">CONTACT</a></li>  
+                </ul>  
+            </div>  
+            <div class="search">  
+                <input class="srch" type="search" name="search" placeholder="Type to text">  
+                <button class="btn">Search</button>  
+            </div>  
+        </nav>  
+
+        <div class="content">  
+            <h1>Promoting  <span>Education</span> Using The Online <br> Platforms</h1>  
+            <p class="par">Welcome to my website MindShare.<br> Helping students achieve their goals using the online learning platforms.</p>  
+            <button class="cn"><a href="#">JOIN US</a></button>  
+
+            <div class="form">  
+                <h2>Login Here</h2>  
+                <input type="email" name="email" placeholder="Enter Email Here" required>  
+                <input type="password" name="password" placeholder="Enter Password Here" required>  
+                <button class="btn">Login</button>   
+                
+                <p class="link">Don't have an account?<br>  
+                <a href="#">Sign up</a> here</p>  
+                <p class="liw">Log in with:</p>  
+                <div class="icon">  
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a> 
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+    <script>  
+        // Function to handle the login button click  
+        document.querySelector(".form .btn").addEventListener("click", function(event) {  
+            event.preventDefault(); // Prevent form submission  
+
+            // Get user input values  
+            const email = document.querySelector("input[name='email']").value;  
+            const password = document.querySelector("input[name='password']").value;  
+
+            // Basic validation  
+            if (!email || !password) {  
+                alert("Please enter both email and password.");  
+                return;  
+            }  
+
+            // Example: Send login data to backend  
+            fetch('/login', {  
+                method: 'POST',  
+                headers: { 'Content-Type': 'application/json' },  
+                body: JSON.stringify({ email, password })  
+            })  
+            .then(response => response.json())  
+            .then(data => {  
+                if (data.success) {  
+                    alert("Login successful!");  
+                } else {  
+                    alert("Login failed: " + (data.message || "Invalid credentials"));  
+                }  
+            })  
+            .catch(error => {  
+                alert("An error occurred during login.");  
+                console.error(error);  
+            });  
+        });  
+
+        // Handle JOIN US button click  
+        document.querySelector(".cn a").addEventListener("click", function(event) {  
+            event.preventDefault();  
+            alert("Redirecting to sign up page... (This is just a demo.)");  
+        });  
+
+        // Search functionality  
+        document.querySelector(".search .btn").addEventListener("click", function(event) {  
+            event.preventDefault();  
+            const query = document.querySelector(".search .srch").value.trim();  
+            if (!query) {  
+                alert("Please enter something to search for.");  
+                return;  
+            }  
+            alert("You searched for: " + query);  
+        });  
+    </script>  
+</body>  
+</html>  
